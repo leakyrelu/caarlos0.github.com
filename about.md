@@ -25,8 +25,9 @@ photo and lives with her and their Chinchila,
 [Zakk](http://www.youtube.com/watch?v=YtWlIPGpxTc),
 in [Joinville - SC, Brazil](http://goo.gl/maps/9tvI4).
 
-He also plays as Defensive End in [Joinville Gladiators][glads] Football
-team (right now recovering from a LCA surgery in the left knee).
+He also played as Defensive End in [Joinville Gladiators][glads] Football
+team last year, he's now recovering from a LCA surgery in the left knee, and
+will then play for [Paraná HP](http://paranahp.com.br/).
 
 ![#96](/public/images/glads.jpg)
 
