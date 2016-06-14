@@ -3,7 +3,7 @@ layout: post
 title: "Flag-oriented Programming"
 ---
 
-`booleans`, right? What a wonderful piece of tecnology! They help us solve so
+`booleans`, right? What a wonderful piece of technology! They help us solve so
 many problems...
 
 > I just need this method to behave slightly different when
