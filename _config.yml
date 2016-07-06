@@ -2,7 +2,7 @@
 highlighter: rouge
 
 # Permalinks
-permalink: /posts/:title
+permalink: /posts/:title/
 timezone: America/Sao_Paulo
 
 # Setup
