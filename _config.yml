@@ -25,6 +25,8 @@ gems:
   - jekyll-paginate
   - jemoji
   - jekyll-redirect-from
+  - jekyll-seo-tag
+
 sass:
   sass_dir: _scss
   compressed: true
