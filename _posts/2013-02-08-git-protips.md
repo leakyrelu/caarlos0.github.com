@@ -109,7 +109,7 @@ $ git checkout new
 ```
 
 ### Revert your entire tree to the last commit state
-> by [@luizkowalski](https://github.com/luizkowalski)
+> by @luizkowalski
 
 Useful when you do some crap and want to throw it all away.
 
@@ -120,7 +120,7 @@ $ git reset --hard HEAD
 You can also specify something like `HEAD~3` to get back 3 commits from HEAD.
 
 ### Remove files that have not been added to staging area
-> by [@luizkowalski](https://github.com/luizkowalski)
+> by @luizkowalski
 
 ```console
 $ git clean -df
@@ -128,7 +128,7 @@ $ git clean -df
 
 ### Stashing
 
-> by [@thiagolenz](https://github.com/thiagolenz)
+> by @thiagolenz
 
 This is useful when you want to switch branches, but don't want to commit a
 half-done work just to get back to it later.
@@ -143,7 +143,7 @@ More info can be found [here](http://git-scm.com/book/en/Git-Tools-Stashing).
 
 ### Merge acting like it's an unique branch
 
-> by [@thiagolenz](https://github.com/thiagolenz)
+> by @thiagolenz
 
 This will do the merge without creating the "merge commit", acting
 much like SVN.
@@ -154,7 +154,7 @@ $ git pull --rebase
 
 ### Aliases
 
-> by [@derekstavis](https://github.com/derekstavis)
+> by @derekstavis
 
 You can setup aliases in git, so get smaller commands and save time. Examples:
 
@@ -180,7 +180,7 @@ $ git commit -m "Update test.js from master"
 
 ### Log deleted files
 
-> by [Ricardo Walter](https://twitter.com/ricardo_walter)
+> by [@ricardo_walter](https://twitter.com/ricardo_walter)
 
 Show the commit log with the deleted files for each commit:
 
@@ -199,7 +199,7 @@ $ git branch -D name # force delete unmerged branch
 
 Remote:
 
-> by [Ricardo Walter](https://twitter.com/ricardo_walter)
+> by [@ricardo_walter](https://twitter.com/ricardo_walter)
 
 ```console
 $ git push origin :branchname
@@ -207,7 +207,7 @@ $ git push origin :branchname
 
 ### Undo your last commit
 
-> by [Endrigo Antonini](https://github.com/antonini)
+> by @antonini
 
 If you do a wrong commit, revert it, but maintain the changes in your staging
 area.
@@ -242,7 +242,7 @@ $ git submodule update --remote --merge
 
 ### Apply a patch to another file
 
-> by [Aurelio Jargas](https://github.com/aureliojargas)
+> by @aureliojargas
 
 This is useful if you have a file in two different repos for
 whatever reason, or if you have 2 very similar files in the
