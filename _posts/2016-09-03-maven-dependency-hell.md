@@ -60,8 +60,7 @@ mvn dependency:list -Dsort=true |
   grep -v '^ *1 '
 ```
 
-<details>
-<summary>Explained version</summary>
+Line-by-line, explained version:
 
 ```console
 mvn dependency:list -Dsort=true | # list all deps
@@ -75,7 +74,6 @@ mvn dependency:list -Dsort=true | # list all deps
   grep -v '^ *1 '                 # grep groups that repeat
 ```
 
-</details>
 
 You'll end up with a list like this:
 
