@@ -31,9 +31,10 @@ crack up (and would possibly pass your validations). `asd123` is instant.
 sites would complain it doesn't have numbers nor capital letters.
 Just delete that code and drop the constraints already;
 - MFA/2FA is required depending on the information the product holds;
-- one of the first things I do is try to recover the password. If you send the
-password in plain text you will get a not very educated but very educational
-email from me - and I will never, ever, recommend your product to anyone.
+- one of the first things I do when I sign up to something is recover the
+password. If you send me the password in plain text you will get a not very
+educated but very educational email from me - and I will never, ever,
+recommend your product to anyone.
 
 ### 3. No dumbassery
 
