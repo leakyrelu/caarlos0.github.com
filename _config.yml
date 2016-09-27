@@ -14,7 +14,7 @@ url:         'http://carlosbecker.com'
 author:
   name: 'Carlos Alexandro Becker'
   url: https://twitter.com/caarlos0
-  email: caarlos0+formspree@gmail.com
+  email: root@carlosbecker.com
 
 exclude:
   - Gemfile
@@ -22,13 +22,13 @@ exclude:
   - bin
 
 gems:
+  - jekyll-feed
+  - jekyll-mentions
   - jekyll-paginate
-  - jemoji
   - jekyll-redirect-from
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-mentions
+  - jemoji
 
 sass:
   sass_dir: _scss
