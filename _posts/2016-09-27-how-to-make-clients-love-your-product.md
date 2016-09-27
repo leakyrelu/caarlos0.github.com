@@ -15,7 +15,8 @@ If I would make a list, it will look more or less like this:
 - don't use [dark design patterns](http://darkpatterns.org/);
 - for the christ's sake no fucking popups;
 - if I'm paying, don't show me ads;
-- if I'm not paying, it's because I don't like, stop sending me emails;
+- if I'm not paying, it's because I didn't like the product, stop sending me
+emails;
 - don't call me unless I ask you to do so.
 
 ### 2. Security, please
