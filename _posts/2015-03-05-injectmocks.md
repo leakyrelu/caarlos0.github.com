@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Using Mockito's @InjectMocks"
+title: "Using Mockito's InjectMocks"
 ---
 
 > FYI: Like the [previous post]({% post_url 2015-02-19-dump-postgres-table-inserts %}),
