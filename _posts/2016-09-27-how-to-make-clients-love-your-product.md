@@ -27,7 +27,8 @@ about your mother and close the browser tab shouting "fuck that";
 - don't implement stupid password validations. According to
 [this site](https://howsecureismypassword.net/), `aSd_123` takes 7 minutes to
 crack up (and would possibly pass your validations). `asd123` is instant.
-`dont-set-password-size-limits-dumbass` takes 373 DUODECILLION YEARS.
+`dont-set-password-size-limits-dumbass` takes 373 DUODECILLION YEARS and most
+sites would complain it doesn't have numbers nor capital letters.
 Just delete that code and drop the constraints already;
 - MFA/2FA is required depending on the information the product holds;
 - one of the first things I do is try to recover the password. If you send the
