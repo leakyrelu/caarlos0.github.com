@@ -28,7 +28,7 @@ It's fully-responsive (open it in your phone and/or tablet and you will see), wi
 no JS at all (except twitter button, but you can remove it, of course), with a
 custom bootstrap build, compiled and minified with custom CSS in a very small CSS
 file (that's why it's really fast). Oh, I almost forgot: it also have an
-[atom feed](/atom.xml).
+[atom feed](/feed.xml).
 
 I also steal-and-tweak a Rakefile to made you able to easily create new posts and start
 server in preview mode.

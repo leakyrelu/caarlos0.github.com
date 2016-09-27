@@ -1,6 +1,8 @@
 ---
 layout: post
-title: "GUnit - Guice and JUnit fall in love"
+title: "Guice Junit test-runner"
+redirect_from:
+  - /gunit-guice-and-junit-fall-in-love/
 ---
 
 Yesterday, I wrote a [small article]({% post_url 2012-08-06-guice-and-junit %})
@@ -46,8 +48,4 @@ public class FooTests {
 }
 ```
 
-## [Get the code](git://github.com/caarlos0/gunit)
-
-Pretty simple, yes?
-
-Cheers.
+[Get the code](https://github.com/caarlos0/guice-junit-test-runner).

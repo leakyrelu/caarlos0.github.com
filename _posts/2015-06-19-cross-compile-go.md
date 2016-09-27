@@ -50,9 +50,7 @@ your application for them. No further work required!
 To automate my work a little, I also created a script within
 [antibody][antibody], which will build, test, tag and release the binaries
 in Github using `gox` and [github-release][github-release]. You can take a
-look at the
-[source](https://github.com/caarlos0/antibody/blob/master/scripts/release.sh)
-if you wish.
+look at the [source][releaser] if you wish.
 
 Hope this helps somebody!
 
@@ -60,3 +58,4 @@ Cheers! :beers:
 
 [antibody]: https://github.com/caarlos0/antibody
 [github-release]: http://github.com/aktau/github-release
+[releaser]: https://github.com/caarlos0/go-releaser/blob/81e3ceb54d321676afcba7d23e9a02a5682ed0f5/release

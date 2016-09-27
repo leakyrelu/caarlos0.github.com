@@ -86,7 +86,7 @@ Now:
 and press CTRL+C. This will stop the proxy server;
 - Go to Firefox settings and check the "No Proxy" option.
 
-Now, access your [Spotify Payment Method Setup](https://www.spotify.com/us/account/subscription/change-payment/)
+Now, access your [Spotify Payment Method Setup](https://www.spotify.com/us/payment/change)
 and configure everything. Yes, you will have to pay or they
 will block you out after some time.
 

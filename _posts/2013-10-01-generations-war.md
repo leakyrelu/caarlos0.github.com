@@ -56,8 +56,3 @@ But the thing is: don't matter how much fear you feel, nature will do its job.
 You and I will be dead sooner or later and the next generations will rule the
 world. It's hard to accept, but we cannot do anything about it, so,
 stop fighting it and just let it be.
-
-
-### References
-
-- Header Image is from [bgr](http://bgr.com/2011/09/13/htc-exec-hip-kids-use-htc-phones-because-iphones-are-not-that-cool-anymore/);
