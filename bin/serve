@@ -1,3 +1,3 @@
 #!/bin/sh
-bundle exec jekyll serve --watch --drafts
-
+eval "$(rbenv init -)"
+bundle exec jekyll serve --watch --drafts --incremental $*
