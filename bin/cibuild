@@ -1,6 +1,4 @@
 #!/bin/bash
 set -eo pipefail
-
-eval "$(rbenv init -)"
 bundle exec jekyll build
 bundle exec htmlproofer ./_site
