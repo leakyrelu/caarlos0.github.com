@@ -23,7 +23,6 @@ exclude:
 
 gems:
   - jekyll-feed
-  - jekyll-mentions
   - jekyll-paginate
   - jekyll-redirect-from
   - jekyll-seo-tag
