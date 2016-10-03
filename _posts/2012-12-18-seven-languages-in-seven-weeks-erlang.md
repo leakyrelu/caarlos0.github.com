@@ -11,7 +11,7 @@ I'll explain it better another day, but, as you may know, Erlang is a
 concurrency language, that used to turn difficult thing easy and easy
 things difficult. There is a price to be paid for solve the world first problems.
 
-![World first problems](http://dl.dropbox.com/u/247142/blog/lol/world-first-problems.jpg "World first problems")
+![World first problems](/public/images/world-first-problems.jpg "World first problems")
 
 So, I'll share with you guys my solutions to the problems proposed by the book.
 
@@ -105,7 +105,7 @@ I was pretty lazy, it looks big, I don't want to do it.
 
 Well, day 3 was pretty big. We will now work with multi concurrency.
 
-![That escalated quickly](http://dl.dropbox.com/u/247142/blog/lol/boy-that-escalated-quickly.gif "That escalated quickly]")
+![That escalated quickly](/public/images/boy-that-escalated-quickly.gif "That escalated quickly]")
 
 
 #### Problem 1

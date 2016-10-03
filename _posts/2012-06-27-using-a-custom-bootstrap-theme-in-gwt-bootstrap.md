@@ -1,6 +1,6 @@
 ---
+title: Theming GWT-Bootstrap
 layout: post
-title: "Theming GWT-Bootstrap"
 ---
 
 First of all, if you haven't done it yet, read
@@ -168,7 +168,7 @@ public class ExampleUiBinder extends Composite {
 
 At this point, if everything is OK, we will get a window like this:
 
-![The not themed version](http://dl.dropbox.com/u/247142/caarlos0.github.com/Captura%20de%20tela%20de%202012-06-26%2020%3A11%3A18.png)
+![The not themed version](/public/images/Captura%20de%20tela%20de%202012-06-26%2020%3A11%3A18.png)
 
 ## Hacking
 
@@ -283,7 +283,7 @@ and setup the resources dir. So, in the end, we will have something like this:
 
 That's it :)
 
-![The Themed Version](http://dl.dropbox.com/u/247142/caarlos0.github.com/Captura%20de%20tela%20de%202012-06-26%2020%3A58%3A45.png)
+![The Themed Version](/public/images/Captura%20de%20tela%20de%202012-06-26%2020%3A58%3A45.png)
 
 ## Considerations
 

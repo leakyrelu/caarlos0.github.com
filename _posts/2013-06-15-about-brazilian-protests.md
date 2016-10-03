@@ -97,6 +97,6 @@ Special thanks to [Diego Selzlein][nerde], who help improve this text by fixing
 some english issues and typo.
 
 [rights]: http://f.cl.ly/items/2z3G3k1c1E0W2W2G2X1d/RIGHTS.jpg
-[map]: https://dl.dropboxusercontent.com/u/247142/caarlos0.github.com/mapa.gif
+[map]: /public/images/mapa.gif
 [othervideo]: http://www.youtube.com/watch?v=IyiQH4QAbuQ
 [nerde]: https://github.com/nerde

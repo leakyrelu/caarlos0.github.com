@@ -20,7 +20,7 @@ on page change. So, I made it.
 
 ### [turbolinks_transitions][transitions]
 
-![example](http://dl.dropbox.com/u/247142/blog/lol/turbolinks_transition.gif "Just a cool animated gif with the example!")
+![example](/public/images/turbolinks_transition.gif "Just a cool animated gif with the example!")
 
 Use it is pretty simple. Just add the gem and import the JS, and you're
 ready to go!

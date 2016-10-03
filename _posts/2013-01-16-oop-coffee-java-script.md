@@ -14,7 +14,7 @@ JavaScript for you.
 
 ## Getting started
 
-![OOP](http://dl.dropbox.com/u/247142/blog/lol/oop.png "OOP")
+![OOP](/public/images/oop.png "OOP")
 
 In JS, a class is nothing more than a function, since functions (and everything
 in JS) are functions. So, basically, you open a function scope, and start code:

@@ -3,7 +3,7 @@ layout: post
 title: "Unobtrusive JS"
 ---
 
-![Unobtrusive car repair](http://dl.dropbox.com/u/247142/blog/lol/repair.jpg "Unobtrusive car repair")
+![Unobtrusive car repair](/public/images/repair.jpg "Unobtrusive car repair")
 
 One of the principles of Unobtrusive JS is the _"separation of functionality
 (the "behavior layer") from a Web page's structure/content and presentation"_.
