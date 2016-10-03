@@ -5,7 +5,7 @@ permalink: /about/
 ---
 
 Carlos is a software developer based in Joinville, Brazil. He currently work
-as site reliability engineer at [ContaAzul](http://contaazul.com) and does
+as site reliability engineer for [ContaAzul](http://contaazul.com) and does
 some remote extra work as software engineer for
 [Teamed.io](http://www.teamed.io/).
 
@@ -20,18 +20,17 @@ Docker, Ansible and Bash script.
 
 ![me and my wife](/public/images/about.jpg)
 
-He's married with this [beautiful girl](http://twitter.com/carinemeyer) in the
+He's married with the [beautiful girl](http://twitter.com/carinemeyer) in the
 photo and lives with her and their Chinchila,
 [Zakk](http://www.youtube.com/watch?v=YtWlIPGpxTc),
 in [Joinville - SC, Brazil](http://goo.gl/maps/9tvI4).
 
 He also played as Defensive End in [Joinville Gladiators][glads] Football
-team last year. He is now recovering from a knee injury and will then play for
-[Joinville RedLions](https://www.facebook.com/redlionsfootball/).
+team last year. He is recovering from a knee injury and may never play again.
 
 ![#96](/public/images/glads.jpg)
 
 [glads]: http://www.joinvillegladiators.com.br
 
-Wanna talk about something? Want to hire me? Looking for a consultant?
-[**Contact me**](/contact).
+Wanna talk about something, hire me or are looking for a consultant?
+[**Contact me!**](/contact).

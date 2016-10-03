@@ -5,7 +5,6 @@ highlighter: rouge
 permalink: /posts/:title/
 timezone: America/Sao_Paulo
 
-# Setup
 title: Carlos Alexandro Becker
 description: 'Software development and related stuff, by Carlos A. Becker'
 baseurl:     ''
@@ -38,11 +37,17 @@ paginate: 3
 # Custom vars
 show_related_posts: true
 animated: true
-
-# Social icons
 show_social_icons: true
+
+# please change ALL items bellow if you are forking my repo!
+# you may also want to edit about.md and delete all posts and images.
 github_username: caarlos0
 twitter_username: caarlos0
-
 google_analytics: UA-50435491-1
 disqus_shortname: caarlos0blog
+wakatime:
+  username: caarlos0
+  charts:
+    - 613f0a05-b962-4524-b2b5-4a28b1cd8560
+    - 8c92453c-7664-4810-9a33-2d2238c0d7ed
+    - bec85d3b-488d-45e6-95d1-7e74b9e87156
