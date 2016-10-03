@@ -1,7 +1,7 @@
 ---
-layout: page
 title: About
-permalink: /about/
+layout: page
+permalink: "/about/"
 ---
 
 Carlos is a software developer based in Joinville, Brazil. He currently work
@@ -33,4 +33,4 @@ team last year. He is recovering from a knee injury and may never play again.
 [glads]: http://www.joinvillegladiators.com.br
 
 Wanna talk about something, hire me or are looking for a consultant?
-[**Contact me!**](/contact).
+[**Contact me!**](/contact)
