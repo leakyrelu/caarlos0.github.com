@@ -6,3 +6,4 @@ Thumbs.db
 .ruby-version
 Gemfile.lock
 .sass-cache/
+.jekyll-metadata
