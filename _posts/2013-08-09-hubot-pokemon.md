@@ -26,8 +26,6 @@ server:
 
 And he will lovely do all needed work to made it happen.
 
-![status](https://lh6.googleusercontent.com/odaYjOwZBkhJK-ZywQ5xUicanLwPaiGysOv7Qi291Zo=s0)
-
 We also use it to get NewRelic and Gaug.es statuses, weather, movie suggestions
 and tons of other things. Better than that, we can tell him to burn things:
 
