@@ -202,7 +202,7 @@ hand), go for it.
 As a final **PROTIP™**, pay attention to what you `ADD` to your image. You
 might want to remove the `.git` folder, binaries, unused files and everything
 you don't need. You can do this using a `.dockerignore` file.
-[Reference](https://docs.docker.com/reference/builder/#dockerignore-file).
+[Reference](https://docs.docker.com/engine/reference/builder/#/dockerignore-file).
 
 By the way, the
 [app code](https://github.com/caarlos0/small-go-app-container-example)
