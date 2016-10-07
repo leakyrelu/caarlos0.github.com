@@ -169,8 +169,8 @@ $ docker push caarlos0/hello-world
 ```
 
 You can learn more about Dockerfile and the Docker cli
-[here](https://docs.docker.com/reference/builder/)
-and [here](https://docs.docker.com/reference/commandline/cli/).
+[here](https://docs.docker.com/engine/reference/builder/)
+and [here](https://docs.docker.com/engine/reference/commandline/).
 
 ### That's all folks!
 
