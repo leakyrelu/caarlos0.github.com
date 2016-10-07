@@ -8,7 +8,6 @@ timezone: America/Sao_Paulo
 title: Carlos Alexandro Becker
 description: 'Software development and related stuff, by Carlos A. Becker'
 baseurl:     ''
-# url:         'http://carlosbecker.com'
 
 author:
   name: 'Carlos Alexandro Becker'
