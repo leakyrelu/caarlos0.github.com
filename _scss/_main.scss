@@ -13,6 +13,7 @@
 
 */
 $serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$mono: "Hack" "Fira Code", "Ubuntu Mono", "Droid Sans Mono", "Operator Mono", "Liberation Mono", "Source Code Pro", Menlo, Consolas, Courier, monospace;
 
 body {
   font-family: $serif;
@@ -249,7 +250,7 @@ abbr {
 }
 
 pre, code {
-  font-family: "Hack" "Fira Code", "Ubuntu Mono", "Droid Sans Mono", "Operator Mono", "Liberation Mono", "Source Code Pro", Menlo, Consolas, Courier, monospace;
+  font-family: $mono;
 }
 
 code {
