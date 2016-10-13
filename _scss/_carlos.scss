@@ -1,11 +1,6 @@
-.post-content {
-  iframe.video,
-  iframe.ted,
-  iframe.twitter-tweet,
-  img {
-    margin: 20px 0;
-    border-radius: 5px;
-  }
+img.emoji {
+  box-shadow: none;
+  margin: 0;
 }
 
 twitterwidget {
@@ -15,7 +10,11 @@ twitterwidget {
   margin-bottom: 20px !important;
 }
 
-img.emoji {
-  box-shadow: none;
-  margin: 0;
+.post-content {
+  iframe.video,
+  iframe.ted,
+  img {
+    margin: 20px 0;
+    border-radius: 5px;
+  }
 }
