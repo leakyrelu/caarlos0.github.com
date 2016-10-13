@@ -4,7 +4,7 @@ layout: page
 permalink: "/about/"
 ---
 
-Carlos is a software developer based in Joinville, Brazil. He currently work
+Carlos is a software developer based in Joinville, Brazil. He currently works
 as site reliability engineer for [ContaAzul](http://contaazul.com) and does
 some remote extra work as software engineer for
 [Teamed.io](http://www.teamed.io/).
