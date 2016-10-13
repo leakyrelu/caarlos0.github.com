@@ -29,7 +29,7 @@ gems:
 
 sass:
   sass_dir: _scss
-  compressed: true
+  style: compressed
 
 paginate: 3
 
