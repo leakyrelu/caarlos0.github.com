@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Dotfiles Are Meant to Be Forked"
-related_project: caarlos0/dotfiles
 ---
 
 ![dotfiles](https://github.com/caarlos0/dotfiles/raw/master/docs/screenshot.png)
@@ -47,11 +46,11 @@ tough), and I tweaked it to fit my taste.
 
 ## so get it, bro
 
+[They are available on github](http://github.com/caarlos0/dotfiles)!
+
 The installation is pretty straightforward. Just clone it in `~/.dotfiles` and
 run the `script/bootstrap` file. If you found any error, please, open an issue
 so I can fix them.
-
-{% include project.html %}
 
 Also, take a look at the [readme][readme] (pretty simple), it will make it easy
 to you to understand the topics and other features.
