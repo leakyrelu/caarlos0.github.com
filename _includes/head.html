@@ -4,7 +4,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/public/css/styles.css" type="text/css">
+    <style type="text/css">
+      {% capture include_to_scssify %}
+        {% include style.scss %}
+      {% endcapture %}
+      {{ include_to_scssify | scssify }}
+    </style>
 
     <!-- Fonts -->
     <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
