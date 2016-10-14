@@ -11,29 +11,11 @@
       {{ include_to_scssify | scssify }}
     </style>
 
-    <!-- Fonts -->
-    {% if site.show_social_icons or site.show_sharing_icons %}
-      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    {% endif %}
-
     <!-- Icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" alt="apple touch icon" href="/public/apple-touch-icon-144-precomposed.png">
     <link rel="shortcut icon" href="/public/favicon.ico" alt="default favicon">
     <!-- android theme -->
     <meta name="theme-color" content="#000000">
-
-    {% if site.google_analytics %}
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', '{{ site.google_analytics }}']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
-    {% endif %}
 
     {% seo %}
 </head>
