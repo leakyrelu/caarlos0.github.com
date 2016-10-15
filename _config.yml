@@ -18,6 +18,12 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - bin
+  - README.md
+  - LICENSE.md
+  - .sass-cache
+  - .travis.yml
+  - .ruby-version
+  - .gitignore
 
 gems:
   - jekyll-feed
@@ -31,12 +37,11 @@ sass:
   sass_dir: _scss
   style: compressed
 
-paginate: 3
+paginate: 5
 
 # Custom vars
 show_related_posts: true
 animated: true
-show_social_icons: true
 
 # please change ALL items bellow if you are forking my repo!
 # you may also want to edit about.md and delete all posts and images.
