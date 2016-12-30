@@ -92,4 +92,4 @@ It does have some limitations, but for most cases it will work gracefully.
 
 If feel like more info, read the [Javadoc][javadoc] for it.
 
-[javadoc]: http://site.mockito.org/mockito/docs/current/org/mockito/InjectMocks.html
+[javadoc]: https://static.javadoc.io/org.mockito/mockito-core/2.5.0/org/mockito/InjectMocks.html
