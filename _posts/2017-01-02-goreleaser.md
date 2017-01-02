@@ -45,7 +45,18 @@ build:
     - linux
 ```
 
-I'm already using it in all my suitable Go projects:
+Then, I basically wire this in the `.travis.yml`:
+
+```yaml
+after_success:
+  test -n "$TRAVIS_TAG" && curl -s https://raw.githubusercontent.com/goreleaser/get/master/latest | bash
+```
+
+Which generates release like this on GitHub:
+
+![Release screenshot](/public/images/goreleaser-release-example.png)
+
+It is so easy that I'm already using it in all my suitable Go projects:
 
 - [GoReleaser itself](https://github.com/goreleaser/releaser)!
 - [Antibody](https://github.com/getantibody/antibody) - A faster and simpler
@@ -86,7 +97,6 @@ top 1 most of that time)
 - [GitHub trending on Go](https://github.com/trending/go) (still at the time
 of writing)
 - Several comments on the [reddit post](https://www.reddit.com/r/golang/comments/5l3i9b/deliver_go_binaries_as_fast_and_easy_as_possible/)
-- 5 pull requests (that are not mine of course)
 - [This issue](https://github.com/goreleaser/releaser/issues/26)
 
 Thank you all!
