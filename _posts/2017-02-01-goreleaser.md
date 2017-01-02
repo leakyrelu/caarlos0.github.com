@@ -64,6 +64,18 @@ stats summary from all repos of any given organization
 - [TorrentWatcher](https://github.com/caarlos0/twatcher) - Automagically
 download torrent files to ~/Downloads
 
+### Roadmap
+
+The roadmap is pretty much what you
+[find in the issues](https://github.com/goreleaser/releaser/issues),
+but, IMO, the highlights are:
+
+- bintray support
+- create linux packages (with fpm or something)
+- post/pre build hooks
+
+I believe those features will enable GoReleaser to be even more useful!
+
 ### Community Feedback
 
 I was very glad to see the results of GoReleaser!
