@@ -25,7 +25,7 @@ I wanted a tool that:
 - is easy to wrap with the CI
 - distributes itself
 
-So, I create [goreleaser](https://github.com/goreleaser/releaser)!
+So, I created [goreleaser](https://github.com/goreleaser/releaser)!
 
 ![goreleaser logo](https://avatars2.githubusercontent.com/u/24697112?v=3&s=200)
 
