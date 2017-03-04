@@ -138,7 +138,7 @@ public interface JobSemaphore {
 }
 ```
 
-We looked up several Java Redis libraries, and decided to use Redisson,
+We looked up several Java Redis libraries, and decided to use [Redisson][],
 mostly because it seems more actively developed. Then, we created a JBoss
 module with it and all its dependencies (after some classloader problems),
 implemented the required interfaces and put it to test, and, since it
@@ -149,6 +149,8 @@ version of our API. We opened pull requests for all of them, and there are
 still some apps' deployment to production pending, but, in a sandboxed
 environment they all worked very well.
 
+[Redisson]: https://github.com/redisson/redisson
+
 ## Results
 
 We achieved a simplified architecture, reduced a little our time-to-production
@@ -157,10 +159,10 @@ All that with **zero downtime** and with ~4k less lines of code than before.
 
 ## Interesting links
 
-- http://redis.io/topics/distlock
-- https://kylewbanks.com/blog/distributed-locks-using-golang-and-redis
-- https://martin.kleppmann.com/2016/02/08/how-to-do-distributed-locking.html
-- http://stackoverflow.com/questions/20736102/how-to-create-a-distributed-lock-with-redis
-- https://github.com/danielstjules/redislock
-- https://github.com/glasslion/redlock
-- https://medium.com/production-ready/simplicity-a-prerequisite-for-reliability-8d000f8d18df
+- [Distributed locks with Redis](http://redis.io/topics/distlock)
+- [Distributed Locks using Golang and Redis](https://kylewbanks.com/blog/distributed-locks-using-golang-and-redis)
+- [How to do distributed locking](https://martin.kleppmann.com/2016/02/08/how-to-do-distributed-locking.html)
+- [How to do distributed locking](http://stackoverflow.com/questions/20736102/how-to-create-a-distributed-lock-with-redis)
+- [Node distributed locking using redis](https://github.com/danielstjules/redislock)
+- [Distributed locks with Redis and Python](https://github.com/glasslion/redlock)
+- [Simplicity: A Prerequisite for Reliability](https://medium.com/production-ready/simplicity-a-prerequisite-for-reliability-8d000f8d18df)
