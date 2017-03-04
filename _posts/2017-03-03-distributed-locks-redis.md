@@ -34,7 +34,7 @@ which seemed reasonable because:
 
 1. It does have a [pretty good locking API](http://docs.hazelcast.org/docs/3.5/manual/html/lock.html);
 2. It is written in Java (and we are mainly a Java shop), which allowed us
-to fix issues if needed ([and it was][hazel-issue].
+to fix issues if needed ([and it was][hazel-issue]).
 
 The architecture was something like this:
 
@@ -67,10 +67,10 @@ other applications as well, but still we had our issues with it:
 practice);
 - Might not work in some cases, like services deployed to AWS BeanStalk (which
 allows you to open one port per service, so the nodes weren't able to sync);
-- Some ugly security group rules to allow the connection between machines
+- Some ugly AWS Security Group rules to allow the connection between machines
 in the port range that Hazelcast uses;
-- Lot's of plumbing code to make sure it all work;
-- Still sometimes it didn't and we didn't know exactly why.
+- If Hazelcast nodes failed to sync with each other, the distributed lock
+would not be distributed anymore, causing possible duplicates.
 
 So, we decided to move on and reimplement our distributed locking API.
 
@@ -102,8 +102,14 @@ But, of course, everything have a bad side:
 - If, for any reason, the redis cluster goes down, the entire jobs ecossystem
 simply stop working.
 
+We called this project "_Operation Locker_", which is a very fun
+[Battlefield 4][bf4] map:
+
+![Operation Locker](https://cloud.githubusercontent.com/assets/245435/20439089/325cd208-ada1-11e6-8678-f8b7df79c3a0.png)
+
 [simple]: https://medium.com/production-ready/simplicity-a-prerequisite-for-reliability-8d000f8d18df#.mv1o3i807
 [Redis]: https://redis.io/
+[bf4]: https://www.battlefield.com/games/battlefield-4
 
 ## Implementation
 
@@ -146,14 +152,13 @@ environment they all worked very well.
 ## Results
 
 - **2468** lines added, including:
-  - lock monitoring (which we didn't had before);
-  - bumping an app's wildfly version from 9 to 10;
+  - Lock monitoring (which we didn't had before);
+  - Bumping an app's Wildfly version from 9 to 10;
   - CI pumbling;
-  - Fixes in some unrrelated things we find out to be wrong in the way;
+  - Fixed a pre-historic bug which in theory may have allowed some locks to never be released;
+  - Fixed some bugs in our app server packaging code;
 - **6581** lines removed;
 - A simplified architecture;
 - Several related issues and post mortems closed;
-- Fixed a pre-historic bug which in theory may have allowed some locks
-to never be released;
 - **0 downtime**;
 
