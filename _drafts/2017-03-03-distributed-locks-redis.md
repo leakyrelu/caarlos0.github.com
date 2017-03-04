@@ -38,7 +38,7 @@ to fix issues if needed ([and it was][hazel-issue]).
 
 The architecture was something like this:
 
-![hazelcast locking architecture](https://cloud.githubusercontent.com/assets/245435/19310039/8f6e39ce-905e-11e6-9f16-8f23e750f088.png)
+![hazelcast locking architecture](/public/images/hazelcast-locking-architecture.png)
 
 Basically, when one of those scheduled tasks servers (let's call them _jobs_)
 went up, it also starts a Hazelcast node and register itself in a database
@@ -87,7 +87,7 @@ The core ideas were to:
 
 tl;dr, this:
 
-![redis locking architecture](https://cloud.githubusercontent.com/assets/245435/19310049/943dd7de-905e-11e6-9c74-7c681de2dcd7.png)
+![redis locking architecture](/public/images/redis-lock-architecture.png)
 
 The reasons behind this decision were:
 
@@ -105,7 +105,7 @@ simply stop working.
 We called this project "_Operation Locker_", which is a very fun
 [Battlefield 4][bf4] map:
 
-![Operation Locker](https://cloud.githubusercontent.com/assets/245435/20439089/325cd208-ada1-11e6-8678-f8b7df79c3a0.png)
+![Operation Locker](/public/images/operation-locker.png)
 
 [simple]: https://medium.com/production-ready/simplicity-a-prerequisite-for-reliability-8d000f8d18df#.mv1o3i807
 [Redis]: https://redis.io/
