@@ -162,3 +162,12 @@ environment they all worked very well.
 - Several related issues and post mortems closed;
 - **0 downtime**;
 
+## Interesting links
+
+- http://redis.io/topics/distlock
+- https://kylewbanks.com/blog/distributed-locks-using-golang-and-redis
+- https://martin.kleppmann.com/2016/02/08/how-to-do-distributed-locking.html
+- http://stackoverflow.com/questions/20736102/how-to-create-a-distributed-lock-with-redis
+- https://github.com/danielstjules/redislock
+- https://github.com/glasslion/redlock
+- https://medium.com/production-ready/simplicity-a-prerequisite-for-reliability-8d000f8d18df
