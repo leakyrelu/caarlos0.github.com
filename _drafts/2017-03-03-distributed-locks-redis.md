@@ -151,16 +151,9 @@ environment they all worked very well.
 
 ## Results
 
-- **2468** lines added, including:
-  - Lock monitoring (which we didn't had before);
-  - Bumping an app's Wildfly version from 9 to 10;
-  - CI pumbling;
-  - Fixed a pre-historic bug which in theory may have allowed some locks to never be released;
-  - Fixed some bugs in our app server packaging code;
-- **6581** lines removed;
-- A simplified architecture;
-- Several related issues and post mortems closed;
-- **0 downtime**;
+We achieved a simplified architecture, reduced a little our time-to-production
+and improved our monitoring.
+All that with **zero downtime** and with ~4k less lines of code than before.
 
 ## Interesting links
 
