@@ -147,7 +147,7 @@ software by dragging some arrows and boxes? Just a few millions of
 dollars spent in the wrong problem.
 
 That's why there were that flaming posts like
-["Agile Is Dead (Long Live Agility)"](http://pragdave.me/blog/2014/03/04/time-to-kill-agile/).
+["Agile Is Dead (Long Live Agility)"](https://pragdave.me/blog/2014/03/04/time-to-kill-agile.html).
 That's also why - I believe, Uncle Bob, after publishing the
 ["Clean Code"](http://www.amazon.com/gp/product/0132350882/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0132350882&linkCode=as2&tag=carlbeck-20&linkId=M5YAXQCRGWV37R22),
 published the
