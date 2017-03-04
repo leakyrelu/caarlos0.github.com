@@ -11,7 +11,7 @@ Preview, and I decided to drop here some lines about it.
 First of all, as the name says, it's a Developer Preview. So, a lot of things
 are buggy, others just doesn't exist yet and others of them I don't even know
 if it's relative to hardware or software. I will not enter in much details,
-it is basically what other people already said in the [forum][ff].
+it is basically what other people already said in the geeksphone's forum.
 
 ### The phone
 
@@ -94,5 +94,4 @@ specific language/framework to build an app, just vanilla HTML, JS and CSS.
 
 
 [keon]: http://www.geeksphone.com/
-[ff]: http://forum.geeksphone.com/index.php?topic=5197.0
 [app]: https://marketplace.firefox.com/app/wealcash/
