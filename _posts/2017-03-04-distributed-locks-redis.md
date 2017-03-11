@@ -147,9 +147,8 @@ implemented the required interfaces and put it to test, and, since it
 worked as expected, we shipped it to production.
 
 After that, we decided to also change all other apps using the previous
-version of our API. We opened pull requests for all of them, and there are
-still some apps' deployment to production pending, but, in a sandbox
-environment they all worked very well.
+version of our API. We opened pull requests for all of them, tested in sandbox,
+and, finally, put them in production. Success!
 
 [Redisson]: https://github.com/redisson/redisson
 
