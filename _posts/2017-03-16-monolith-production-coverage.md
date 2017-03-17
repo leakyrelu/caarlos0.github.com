@@ -168,9 +168,13 @@ in a server and generate the reports later.
 
 ## Results
 
-The team was able to open ~20 pull requests which removed ~5k lines of
-useless code in very little time. I'm personally happy with this result and
-looking forward to generate more reports and remove even more code.
+Of course, having this coverage report is not a free pass to set on fire code
+that shows up in red in it. It's more like an inspirational map of things that
+we can remove. But, using it as map, the team was able to open ~20
+pull requests which removed ~5k lines of useless code in very little time.
+
+I'm happy with this result and looking forward to generate more
+reports and remove even more code.
 
 How about you? What are your strategies to safely delete code?
 
