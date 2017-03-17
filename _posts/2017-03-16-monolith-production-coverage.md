@@ -50,30 +50,26 @@ I confess that the very first time I did all this by hand, mostly because
 I wasn't sure it would work. After checking that it does work, I decided
 to automate it.
 
-We use Puppet to manage our servers configuration. So I created a class
-called `jacoco` which would download and instrument our Wildfly
-application server if a `coverage` tag was set on the target node:
+We use Puppet to manage our servers configuration. So I wrote a manifest
+that would download and instrument our Wildfly application server if a
+`coverage` tag was set on the target node:
 
 ```puppet
-class contaazul_app::jacoco {
-  include stdlib
+$jacoco_version='0.7.9'
 
-  $jacoco_version='0.7.9'
-
-  if tagged('coverage') {
-    exec { 'download-jacoco':
-      command => "/usr/bin/curl -L -o /storage/environment/jacoco-${jacoco_version}.zip https://repo1.maven.org/maven2/org/jacoco/jacoco/${jacoco_version}/jacoco-${jacoco_version}.zip",
-      creates => "/storage/environment/jacoco-${jacoco_version}.zip",
-    }~>
-    exec { 'unzip-jacoco':
-      command     => "/usr/bin/unzip /storage/environment/jacoco-${jacoco_version}.zip -d /storage/environment/jacoco",
-      refreshonly => true,
-      creates     => '/storage/environment/jacoco',
-    }
-    file_line { 'jacoco_java_opts':
-      path => '/storage/environment/contaazul/bin/standalone.conf',
-      line => 'JAVA_OPTS="$JAVA_OPTS -javaagent:/storage/environment/jacoco/lib/jacocoagent.jar=destfile=/storage/environment/contaazul/jacoco.exec,output=file,append=true,dumponexit=true"',
-    }
+if tagged('coverage') {
+  exec { 'download-jacoco':
+    command => "/usr/bin/curl -L -o /storage/environment/jacoco-${jacoco_version}.zip https://repo1.maven.org/maven2/org/jacoco/jacoco/${jacoco_version}/jacoco-${jacoco_version}.zip",
+    creates => "/storage/environment/jacoco-${jacoco_version}.zip",
+  }~>
+  exec { 'unzip-jacoco':
+    command     => "/usr/bin/unzip /storage/environment/jacoco-${jacoco_version}.zip -d /storage/environment/jacoco",
+    refreshonly => true,
+    creates     => '/storage/environment/jacoco',
+  }
+  file_line { 'jacoco_java_opts':
+    path => '/storage/environment/contaazul/bin/standalone.conf',
+    line => 'JAVA_OPTS="$JAVA_OPTS -javaagent:/storage/environment/jacoco/lib/jacocoagent.jar=destfile=/storage/environment/contaazul/jacoco.exec,output=file,append=true,dumponexit=true"',
   }
 }
 ```
