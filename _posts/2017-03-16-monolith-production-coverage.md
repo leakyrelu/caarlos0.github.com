@@ -3,10 +3,10 @@ layout: post
 title: "Getting code coverage of a monolithic app in production"
 ---
 
-Microservices is the new fancy way of doing applications, but, most of the
-companies still have big and old monoliths in production. In rapidly evolving
-software of this size, it's common to have several lines of code which
-are never executed in production, but sometimes, it's hard to find them.
+Microservices is the new fancy way of doing applications. Yet, most
+companies still have big and old monoliths in production. In fast evolving
+software of this size, it’s usual to have lines of code which are never
+executed in production. Sometimes it’s hard to find them.
 
 With that in mind, I decided to try to get the code coverage of production
 code. Yeah, in production.
@@ -37,8 +37,8 @@ measure code covered by unit tests.
 
 It is an agent that you pass to the `java` command in the
 `javaagent` flag. It instruments the _bytecode_ and generate a binary
-report file. Having the source files and this binary report file, you can
-generate HTML reports which are human readable.
+report file. Having the source and binary report files, you can generate
+human readable HTML reports .
 
 At the build phase, Maven plugins usually do all this work for us. But I don't
 want the test coverage, I want production coverage. So, I need to add
@@ -48,7 +48,7 @@ the JaCoCo agent to a production server to instrument production code.
 
 We don't use Maven in production, so I had to put the agent to run myself.
 
-We use Puppet to manage our servers configuration, so I wrote a manifest
+We use Puppet to manage our servers configuration. So, I wrote a manifest
 that would download and instrument our Wildfly application server if a
 `coverage` tag was set on the target node:
 
@@ -136,8 +136,8 @@ output.
 
 ## To automate or not to automate
 
-At this point I wanted to automate it all in order to get daily
-reports (or something like that).
+At this point I wanted to automate it all to get daily reports
+(or something like that).
 
 After giving it some thought, I decided that it won't worth it.
 The reasoning behind this decision was:
