@@ -3,32 +3,36 @@ layout: post
 title: "Getting code coverage of a monolithic app in production"
 ---
 
-> TODO: intro
+Microservices is the new fancy way of doing applications, but, most
+companies still have big, old monoliths in production. In rapid-evolving
+softwares this big, it's common to have several lines of code which
+are never executed in production, but, sometimes, it's hard to find them.
 
-Lot's of companies have monolithic applications running in production.
-It's likely that most of those applications have pieces of code that are never executed.
+With that in mind, I decided to try to get the code coverage of production
+code. Yeah, in production.
 
-The problem is that those pieces of code are hard to find.
-Monoliths usually have a lot of not-very-well structured code.
-
-With that in mind, I decided to try to get the code coverage of production code, in production. This is the story of how I get it.
+But first, I'll introduce you to our subject.
 
 ## ContaAzul, the monolith
 
 The monolith in question here is [ContaAzul][]. It started as a Struts2
 application and evolved to a Java EE application, but still has Struts2
-code running in it.
+code running in it. You can check [these slides][slides] by [@Marcos][]
+to get an idea on how it evolved.
 
-According to `cloc`, it has 5k Java files, summing 400k lines of code.
-It also have some SQL, Maven, XML, some template languages. Counting them all,
-we get 7k files and 900k lines of code.
+According to `cloc`, it has ~5k Java files, summing ~400k lines of code.
+That's a lot of code, and I'm not even counting other kinds of source files
+(like SQL, templates, etc).
+In an attempt of remove useless Java code, I had the idea of running
+the [JaCoCo][] agent in a production server for some time, and try to
+generate the reports.
 
-In an attempt of remove useless code, I had the idea of running the [JaCoCo][]
-agent in a production server for some time, and try to generate the reports.
+[@Marcos]: https://github.com/marcos
+[slides]: https://pt.slideshare.net/marcoswp3x/tdc-2015-java-from-old-school-to-moder-art
 
-## JaCoCo?
+## Wait, JaCoCo what?
 
-[JaCoCo][] stands for "Java Code Coverage", and it is usually used to
+[JaCoCo][] stands for "Java Code Coverage". It is usually used to
 measure code covered by unit tests.
 
 It is an agent that you pass to the `java` command in the
@@ -36,13 +40,19 @@ It is an agent that you pass to the `java` command in the
 file. Having the source files and this binary report file, you can
 generate HTML reports which are human readable.
 
-That seems a lot of work, so, how can I automate it?
+In the build phase, Maven plugins usually do all this work for us. But I don't
+want the test coverage, I want production coverage. So, I need to add
+the JaCoCo agent to a production server to instrument production code.
 
 ## Instrumenting production code
 
-We use Puppet to manage our servers configuration. I created a class
-called `jacoco` which would download and install instrument our Wildfly
-application server if a `coverage` tag is set on the server:
+I confess that the very first time I did all this by hand, mostly because
+I wasn't sure it would work. After checking that it does work, I decided
+to automate it.
+
+We use Puppet to manage our servers configuration. So I created a class
+called `jacoco` which would download and instrument our Wildfly
+application server if a `coverage` tag was set on the target node:
 
 ```puppet
 class contaazul_app::jacoco {
@@ -68,7 +78,7 @@ class contaazul_app::jacoco {
 }
 ```
 
-With that in place, I could tag the nodes I want reports for:
+With that in place, I could tag the nodes I want coverage reports for:
 
 ```puppet
 node api {
@@ -116,7 +126,7 @@ HTML reports:
 </project>
 ```
 
-Them just fire `ant` up and open the report in your web browser:
+Them fire `ant` up and open the report in your web browser:
 
 ```console
 $ ant
@@ -132,7 +142,7 @@ output.
 
 ## To automate or not to automate
 
-At this point I was tempted to automate it all the way up and have daily
+At this point I wanted to automate it all the way up and have daily
 reports or something like that.
 
 After giving it some thought, I decided to run it a for a few hours in
@@ -144,13 +154,14 @@ The reasoning behind this decision was:
 - Running it all the time would add the complexity of:
   - Merging reports;
   - Dealing with code that is always changing;
-  - Ant failures due to class name conflicts and stuff like that (this might happen in multi-module big projects).
+  - Ant failures due to class name conflicts (which may happen on big
+multi-module projects).
 
 I'm also aware that running it this way have its own setbacks:
 
 - I (or someone else) have to manually generate and share the reports;
 - Some code may be used only in some days or periods of the day (seasonality),
-which may induce to humans erroneously removing code that is used.
+which may induce to humans removing code that is used.
 
 Anyways, with all this code in place it's kind of easy to run it for a while
 in a server and generate the reports later.
