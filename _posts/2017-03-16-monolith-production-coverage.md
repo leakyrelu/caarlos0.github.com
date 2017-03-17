@@ -40,7 +40,7 @@ It is an agent that you pass to the `java` command in the
 file. Having the source files and this binary report file, you can
 generate HTML reports which are human readable.
 
-In the build phase, Maven plugins usually do all this work for us. But I don't
+At the build phase, Maven plugins usually do all this work for us. But I don't
 want the test coverage, I want production coverage. So, I need to add
 the JaCoCo agent to a production server to instrument production code.
 
@@ -122,7 +122,7 @@ HTML reports:
 </project>
 ```
 
-Them fire `ant` up and open the report in your web browser:
+Then, fire `ant` up and open the report in your web browser:
 
 ```console
 $ ant
