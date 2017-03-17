@@ -46,11 +46,9 @@ the JaCoCo agent to a production server to instrument production code.
 
 ## Instrumenting production code
 
-I confess that the very first time I did all this by hand, mostly because
-I wasn't sure it would work. After checking that it does work, I decided
-to automate it.
+We don't use Maven in production, so I had to put the agent to run myself.
 
-We use Puppet to manage our servers configuration. So I wrote a manifest
+We use Puppet to manage our servers configuration, so I wrote a manifest
 that would download and instrument our Wildfly application server if a
 `coverage` tag was set on the target node:
 
