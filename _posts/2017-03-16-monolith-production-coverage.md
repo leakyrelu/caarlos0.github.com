@@ -80,7 +80,7 @@ node api {
 }
 ```
 
-But, running JaCoCo is only part of the problem. We also need to gather
+But running JaCoCo is only part of the problem. We also need to gather
 the binary files and generate the HTML reports from them.
 
 ## Compiling the reports
@@ -136,11 +136,10 @@ output.
 
 ## To automate or not to automate
 
-At this point I wanted to automate it all the way up and have daily
-reports or something like that.
+At this point I wanted to automate it all in order to get daily
+reports (or something like that).
 
-After giving it some thought, I decided to run it a for a few hours in
-a chosen server when I need or someone asks for the reports.
+After giving it some thought, I decided that it won't worth it.
 The reasoning behind this decision was:
 
 - JaCoCo may add some overhead;
