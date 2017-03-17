@@ -3,10 +3,10 @@ layout: post
 title: "Getting code coverage of a monolithic app in production"
 ---
 
-Microservices is the new fancy way of doing applications, but, most
-companies still have big, old monoliths in production. In rapid-evolving
-softwares this big, it's common to have several lines of code which
-are never executed in production, but, sometimes, it's hard to find them.
+Microservices is the new fancy way of doing applications, but, most of the
+companies still have big and old monoliths in production. In rapidly evolving
+software of this size, it's common to have several lines of code which
+are never executed in production, but sometimes, it's hard to find them.
 
 With that in mind, I decided to try to get the code coverage of production
 code. Yeah, in production.
