@@ -147,7 +147,7 @@ The reasoning behind this decision was:
 
 - JaCoCo may add some overhead;
 - People won't look at these reports every day;
-- Running it all the time would add the complexity of:
+- Running it 24/7 would add this kind of complexity:
   - Merging reports;
   - Dealing with code that is always changing;
   - Ant failures due to class name conflicts (which may happen on big
@@ -164,15 +164,15 @@ in a server and generate the reports later.
 
 ## Results
 
-Of course, having this coverage report is not a free pass to set on fire code
-that shows up in red in it. It's more like an inspirational map of things that
-we can remove. But, using it as map, the team was able to open ~20
-pull requests which removed ~5k lines of useless code in very little time.
+Having this coverage report is not a free pass to set on fire code
+that shows up in it. It's more like an inspirational map of things that
+we can remove. Using it as map, the team was able to open ~20
+pull requests which removed ~5k lines of useless code in a very short time.
 
 I'm happy with this result and looking forward to generate more
 reports and remove even more code.
 
-How about you? What are your strategies to safely delete code?
+How about you? What are your strategies to safely delete useless code?
 
 [ContaAzul]: http://contaazul.com
 [JaCoCo]: https://github.com/jacoco/jacoco
