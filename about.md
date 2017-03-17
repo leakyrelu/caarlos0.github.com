@@ -25,12 +25,5 @@ photo and lives with her and their Chinchila,
 [Zakk](http://www.youtube.com/watch?v=YtWlIPGpxTc),
 in [Joinville - SC, Brazil](http://goo.gl/maps/9tvI4).
 
-He also played as Defensive End in [Joinville Gladiators][glads] Football
-team last year. He is recovering from a knee injury and may never play again.
-
-![#96](/public/images/glads.jpg)
-
-[glads]: http://www.joinvillegladiators.com.br
-
 Wanna talk about something, hire me or are looking for a consultant?
 [**Contact me!**](/contact)
