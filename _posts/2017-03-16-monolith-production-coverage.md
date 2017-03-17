@@ -11,7 +11,7 @@ are never executed in production, but sometimes, it's hard to find them.
 With that in mind, I decided to try to get the code coverage of production
 code. Yeah, in production.
 
-But first, I'll introduce you to our subject.
+But first, let me introduce you to our monolith.
 
 ## ContaAzul, the monolith
 
