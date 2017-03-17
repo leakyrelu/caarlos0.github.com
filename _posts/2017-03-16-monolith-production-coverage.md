@@ -1,7 +1,16 @@
 ---
 layout: post
-title: "Getting code coverage of a monolithic app in production"
+title: "Getting code coverage of an application in production"
 ---
+
+<!--
+Other title ideas:
+
+- Safely delete useless code with code coverage in production
+- Getting production code coverage to easily/safely delete unused code
+- Safely get rid of useless code with coverage in production
+- Fixing the plane on flight: a guid to get rid of useless code with code coverage in production
+-->
 
 Microservices is the new fancy way of doing applications. Yet, most
 companies still have big and old monoliths in production. In fast evolving
@@ -134,7 +143,7 @@ You should see a report like this (this is a fake one):
 ProTip™: if the Ant task fails, try to run it with `-v` for a more verbose
 output.
 
-## To automate or not to automate
+## To automate, or not to automate
 
 At this point I wanted to automate it all to get daily reports
 (or something like that).
@@ -156,7 +165,7 @@ I'm also aware that running it this way have its own setbacks:
 - Some code may be used only in some days or periods of the day (seasonality),
 which may induce to humans removing code that is used.
 
-Anyways, with all this code in place it's kind of easy to run it for a while
+Anyway, with all this code in place it's kind of easy to run it for a while
 in a server and generate the reports later.
 
 ## Results
