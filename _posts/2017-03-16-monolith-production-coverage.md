@@ -30,11 +30,11 @@ code running in it. You can check [these slides][slides] by [@Marcos][]
 to get an idea on how it evolved.
 
 According to `cloc`, it has ~5k Java files, summing ~400k lines of code.
-That's a lot of code, and I'm not even counting other kinds of source files
+That's a lot of code and I'm not even counting other kinds of source files
 (like SQL, templates, etc).
-In an attempt of remove useless Java code, I had the idea of running
-the [JaCoCo][] agent in a production server for some time, and try to
-generate the reports.
+In an attempt to remove useless Java code, I had the idea of running
+the [JaCoCo][] agent agent in production server for a while to generate
+the coverage reports.
 
 [@Marcos]: https://github.com/marcos
 [slides]: https://pt.slideshare.net/marcoswp3x/tdc-2015-java-from-old-school-to-moder-art
@@ -45,12 +45,12 @@ generate the reports.
 measure code covered by unit tests.
 
 It is an agent that you pass to the `java` command in the
-`javaagent` flag. It instruments the _bytecode_ and generate a binary
+`javaagent` flag. It instruments the _bytecode_ and generates a binary
 report file. Having the source and binary report files, you can generate
 human readable HTML reports .
 
-At the build phase, Maven plugins usually do all this work for us. But I don't
-want the test coverage, I want production coverage. So, I need to add
+At the build phase, Maven plugins usually does all this work for us. But I
+don't want the test coverage, I want production coverage. So, I need to add
 the JaCoCo agent to a production server to instrument production code.
 
 ## Instrumenting production code
@@ -81,7 +81,7 @@ if tagged('coverage') {
 }
 ```
 
-With that in place, I could tag the nodes I want coverage reports for:
+With that in place, I could tag the nodes that I want coverage reports for:
 
 ```puppet
 node api {
@@ -95,7 +95,11 @@ the binary files and generate the HTML reports from them.
 ## Compiling the reports
 
 The first step is to get the report from the server. The most
-straightforward way is to use `scp`, and that was what I did.
+straightforward way to do that is to use `scp`, and that was what I did.
+
+```console
+scp theserver:/storage/environment/contaazul/jacoco.exec .
+```
 
 Then, I downloaded and extracted JaCoCo to my `/tmp` folder:
 
@@ -148,7 +152,7 @@ output.
 At this point I wanted to automate it all to get daily reports
 (or something like that).
 
-After giving it some thought, I decided that it won't worth it.
+After giving it some thought, I decided that it wouldn't worth it.
 The reasoning behind this decision was:
 
 - JaCoCo may add some overhead;
