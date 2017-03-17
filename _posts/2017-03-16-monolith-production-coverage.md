@@ -3,7 +3,7 @@ layout: post
 title: "Getting code coverage of a monolithic app in production"
 ---
 
-> intro?
+> TODO: intro
 
 Lot's of companies have monolithic applications running in production.
 It's likely that most of those applications have pieces of code that are never executed.
@@ -84,61 +84,84 @@ the binary files and generate the HTML reports from them.
 The first step is to get the report from the server. The most
 straightforward way is to use `scp`, and that was what I did.
 
-With that file in hands, I wrote a very simple Ant task to generate the
+Then, I downloaded and extracted JaCoCo to my `/tmp` folder:
+
+```console
+$ wget https://repo1.maven.org/maven2/org/jacoco/jacoco/0.7.9/jacoco-0.7.9.zip -O /tmp/jacoco.zip
+$ unzip /tmp/jacoco.zip -d /tmp/jacoco
+```
+
+With all that in place, I wrote a very simple Ant task to generate the
 HTML reports:
 
 ```xml
 <project name="ContaAzul" xmlns:jacoco="antlib:org.jacoco.ant">
     <taskdef uri="antlib:org.jacoco.ant" resource="org/jacoco/ant/antlib.xml">
-        <classpath path="/Users/carlos/Downloads/jacoco-0.7.9/lib/jacocoant.jar"/>
+        <classpath path="/tmp/jacoco/lib/jacocoant.jar"/>
     </taskdef>
-	<jacoco:report>
-		<executiondata>
-			<file file="jacoco.exec"/>
-		</executiondata>
-		<structure name="contaazul-app-business">
-			<classfiles>
-        <fileset dir="contaazul-app-business/target/classes"/>
-			</classfiles>
-			<sourcefiles encoding="UTF-8">
-        <fileset dir="contaazul-app-business/src"/>
-			</sourcefiles>
-		</structure>
-		<html destdir="contaazul-app-business/target/report"/>
-	</jacoco:report>
+    <jacoco:report>
+        <executiondata>
+            <file file="jacoco.exec"/>
+        </executiondata>
+        <structure name="ContaAzul">
+            <classfiles>
+                <dirset dir="." includes="**/target/classes"/>
+            </classfiles>
+            <sourcefiles encoding="UTF-8">
+                <dirset dir="." includes="**/src/main/java"/>
+            </sourcefiles>
+        </structure>
+        <html destdir="report"/>
+    </jacoco:report>
 </project>
 ```
 
-It is worth saying that our monolith, as most monoliths (I assume), has
-a lot of modules. `contaazul-app-business` is one of them, and I'm
-generating its report in the sample task above. Each module would have
-its own report
+Them just fire `ant` up and open the report in your web browser:
 
+```console
+$ ant
+$ open report/index.html
+```
+
+You should see a report like this (this is a fake one):
+
+![Fake example report ordering by less coverage](/public/images/coverage-report.png)
+
+ProTip™: if the Ant task fails, try to run it with `-v` for a more verbose
+output.
 
 ## To automate or not to automate
 
-It is worth to mention that we don't intend to run this all the time, but
-rather for a few hours in one server. The reasoning behind this decision is:
+At this point I was tempted to automate it all the way up and have daily
+reports or something like that.
+
+After giving it some thought, I decided to run it a for a few hours in
+a chosen server when I need or someone asks for the reports.
+The reasoning behind this decision was:
 
 - JaCoCo may add some overhead;
-- We won't look at these reports every day;
+- People won't look at these reports every day;
 - Running it all the time would add the complexity of:
   - Merging reports;
-  - Dealing code that is always changing;
-  - Automate all these steps.
+  - Dealing with code that is always changing;
+  - Ant failures due to class name conflicts and stuff like that (this might happen in multi-module big projects).
 
 I'm also aware that running it this way have its own setbacks:
 
-- I (or someone else) have to manually generate the reports;
-- Some code may be used only in some days or periods of the day (seasonality).
+- I (or someone else) have to manually generate and share the reports;
+- Some code may be used only in some days or periods of the day (seasonality),
+which may induce to humans erroneously removing code that is used.
 
+Anyways, with all this code in place it's kind of easy to run it for a while
+in a server and generate the reports later.
 
+## Results
 
+The team was able to open ~20 pull requests which removed ~5k lines of
+useless code in very little time. I'm personally happy with this result and
+looking forward to generate more reports and remove even more code.
+
+How about you? What are your strategies to safely delete code?
+
+[ContaAzul]: http://contaazul.com
 [JaCoCo]: https://github.com/jacoco/jacoco
-
-- pq
-- o que é o jacoco
-- java agents
-- colocando pra rodar no jboss
-- coletando info
-- compilando a info coletada
