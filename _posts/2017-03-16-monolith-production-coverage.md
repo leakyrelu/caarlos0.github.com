@@ -36,8 +36,8 @@ generate the reports.
 measure code covered by unit tests.
 
 It is an agent that you pass to the `java` command in the
-`javaagent` flag. It will then instrument your _bytecode_ and generate a binary
-file. Having the source files and this binary report file, you can
+`javaagent` flag. It instruments the _bytecode_ and generate a binary
+report file. Having the source files and this binary report file, you can
 generate HTML reports which are human readable.
 
 At the build phase, Maven plugins usually do all this work for us. But I don't
