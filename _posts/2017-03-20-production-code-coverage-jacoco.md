@@ -1,16 +1,7 @@
 ---
 layout: post
-title: "Getting code coverage of an application in production"
+title: "Measuring production code coverage with JaCoCo"
 ---
-
-<!--
-Other title ideas:
-
-- Safely delete useless code with code coverage in production
-- Getting production code coverage to easily/safely delete unused code
-- Safely get rid of useless code with coverage in production
-- Fixing the plane on flight: a guid to get rid of useless code with code coverage in production
--->
 
 Microservices is the new fancy way of doing applications. Yet, most
 companies still have big and old monoliths in production. In fast evolving
@@ -182,7 +173,7 @@ pull requests which removed ~5k lines of useless code in a very short time.
 I'm happy with this result and looking forward to generate more
 reports and remove even more code.
 
-How about you? What are your strategies to safely delete useless code?
+How about you? What are your strategies to find useless code to delete?
 
 [ContaAzul]: http://contaazul.com
 [JaCoCo]: https://github.com/jacoco/jacoco
