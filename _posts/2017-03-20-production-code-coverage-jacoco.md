@@ -6,12 +6,12 @@ title: "Measuring production code coverage with JaCoCo"
 Microservices is the new fancy way of doing applications. Yet, most
 companies still have big and old monoliths in production. In fast evolving
 software of this size, it’s usual to have lines of code which are never
-executed in production. Sometimes it’s hard to find them.
+executed in production. Production code coverage reports can help
+us find those lines.
 
-With that in mind, I decided to try to get the code coverage of production
-code. Yeah, in production.
-
-But first, let me introduce you to our monolith.
+The strategy described here can be used in virtually any Java software,
+but what led me to do this was the difficulty to find code that was
+not being used in a monolith.
 
 ## ContaAzul, the monolith
 
@@ -86,7 +86,7 @@ the binary files and generate the HTML reports from them.
 ## Compiling the reports
 
 The first step is to get the report from the server. The most
-straightforward way to do that is to use `scp`, and that was what I did.
+straightforward way to do that is to use `scp` and that was what I did.
 
 ```console
 scp theserver:/storage/environment/contaazul/jacoco.exec .
