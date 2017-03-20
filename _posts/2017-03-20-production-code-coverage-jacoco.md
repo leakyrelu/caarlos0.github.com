@@ -24,7 +24,7 @@ According to `cloc`, it has ~5k Java files, summing ~400k lines of code.
 That's a lot of code and I'm not even counting other kinds of source files
 (like SQL, templates, etc).
 In an attempt to remove useless Java code, I had the idea of running
-the [JaCoCo][] agent agent in production server for a while to generate
+the [JaCoCo][] agent in production server for a while to generate
 the coverage reports.
 
 [@Marcos]: https://github.com/marcos
