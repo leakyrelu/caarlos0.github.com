@@ -39,8 +39,8 @@ A basic tree would look like:
 ├── example.go
 ├── example_test.go
 ├── goreleaser.yml
-├── lock.json
-└── manifest.json
+├── Gopkg.lock
+└── Gopkg.toml
 ```
 
 - `Makefile`: contains common tasks for the project, like formating, testing,
@@ -49,7 +49,7 @@ linting, etc;
 - `example.go` and `example_test.go`: is the "library" of the application and
 its respective files. Could be more than one file, of course;
 - `goreleaser.yml`: the GoReleaser configuration;
-- `lock.json` and `manifest.json`: dependencies locks and manifest.
+- `Gopkg.lock` and `Gopkg.toml`: dependencies locks and manifest.
 
 Of course, creating this all the time I want to write some tool would be
 a lot of work, so I kind of automated it.
