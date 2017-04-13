@@ -1,4 +1,7 @@
 #!/bin/bash
 set -eo pipefail
 bundle exec jekyll build
-bundle exec htmlproofer ./_site
+bundle exec htmlproofer \
+  --http-status-ignore "403,0" \
+  --url-ignore "/www.archlinux.org/" \
+  ./_site
