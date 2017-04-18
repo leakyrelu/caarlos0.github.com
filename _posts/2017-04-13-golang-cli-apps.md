@@ -34,7 +34,7 @@ A basic tree would look like:
 .
 ├── Makefile
 ├── cmd
-│   └── main
+│   └── example
 │       └── main.go
 ├── example.go
 ├── example_test.go
@@ -45,7 +45,7 @@ A basic tree would look like:
 
 - `Makefile`: contains common tasks for the project, like formating, testing,
 linting, etc;
-- `cmd/main/main.go`: is the cli entrypoint;
+- `cmd/example/main.go`: is the cli entrypoint;
 - `example.go` and `example_test.go`: is the "library" of the application and
 its respective files. Could be more than one file, of course;
 - `goreleaser.yml`: the GoReleaser configuration;
@@ -74,6 +74,9 @@ $ git grep --name-only example | while read -r file; do
       $file
   done
 $ $EDITOR LICENSE.md # change name and year
+$ mv example.go myapp.go
+$ mv example_test.go myapp_test.go
+$ mv cmd/example cmd/myapp
 $ rm -rf .git
 $ git init
 $ git add -A
@@ -84,7 +87,7 @@ It is actually a working app (that does nothing), to run it:
 
 ```console
 $ make setup
-$ go run ./cmd/main/main.go -h
+$ go run ./cmd/example/main.go -h
 ```
 
 Now, we create a GitHub repository for our new app and push it:
