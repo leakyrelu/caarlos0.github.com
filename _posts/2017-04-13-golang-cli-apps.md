@@ -66,21 +66,7 @@ To use it, we can simply:
 $ cd $GOPATH/src/github.com/mysuer
 $ git clone git@github.com:caarlos0/example.git myapp
 $ cd myapp
-$ git grep --name-only example | while read -r file; do
-    gsed -i'' \
-      -e 's/caarlos0\/example/myuser\/myapp/g' \
-      -e 's/example/myapp/g' \
-      -e 's/Example/MyApp/g' \
-      $file
-  done
-$ $EDITOR LICENSE.md # change name and year
-$ mv example.go myapp.go
-$ mv example_test.go myapp_test.go
-$ mv cmd/example cmd/myapp
-$ rm -rf .git
-$ git init
-$ git add -A
-$ git commit -m 'MyApp first commit!'
+$ ./script/setup myuser MyApp # notice the case on the second arg
 ```
 
 It is actually a working app (that does nothing), to run it:
@@ -93,7 +79,6 @@ $ go run ./cmd/example/main.go -h
 Now, we create a GitHub repository for our new app and push it:
 
 ```console
-$ git remote add origin git@github.com:myuser/myapp.git
 $ git push origin master
 ```
 
@@ -110,7 +95,7 @@ may show off other tools we use.
 - Latest release
 - License
 - [Travis] build status
-- [Coveralls] Coverage status
+- [Codecov] Coverage status
 - [GoReportCard] status
 - [SayThanks.io], so people can thank us for our projects
 - [GoReleaser] badge
@@ -121,13 +106,11 @@ Latest release will start to work when we launch the first release.
 We need to enable our new repository on
 [Travis settings](https://travis-ci.org/profile/) to make the travis badge work.
 
-Coverage reports will require us to enable our new repository on
-[Coveralls settings](https://coveralls.io/repos/new). Click on `Details`, and
-It should show us a token, which should be added as an environment variable
-named `COVERALLS_TOKEN` in the travis project settings.
+Coverage reports will require us to just have an account at [Codecov] website.
+Yep, just as simple.
 
 Now, we need commit and push something to fire a Travis build and check
-if both Travis and Coveralls badges work:
+if both Travis and Codecov badges work:
 
 ```console
 $ git commit --allow-empty -m 'fire travis build'
@@ -136,7 +119,7 @@ $ git push origin master
 
 Wait a few minutes, and the badges should be displayed on the README!
 
-[SayThanks.io] is as easy as creating an account on the site and ajusting
+[SayThanks.io] is as easy as creating an account on the site and adjusting
 the username on the badge.
 
 With that done, we can focus on write the features we want!
@@ -183,7 +166,7 @@ To enable it, we just need to create a new
 with the `repo` box checked.
 
 Then, we need to add it as an environment variable named `GITHUB_TOKEN` on
-Travis  project settings, just like we did with `COVERALLS_TOKEN`.
+Travis  project settings.
 
 We also need a tap repository. Mine is [caarlos0/homebrew-tap], which
 is kind of a standard. I also created a `Formula` folder inside it.
@@ -229,7 +212,7 @@ Let's discuss on the comments bellow!
 [caarlos0/example]: https://github.com/caarlos0/example
 [caarlos0/homebrew-tap]: https://github.com/caarlos0/homebrew-tap
 [caarlos0/spin]: https://github.com/caarlos0/spin
-[Coveralls]: https://coveralls.io
+[Codecov]: https://codecov.io
 [golang/dep]: https://github.com/golang/dep
 [GoReleaser]: https://github.com/goreleaser/goreleaser
 [goreleaser]: https://github.com/goreleaser/goreleaser
