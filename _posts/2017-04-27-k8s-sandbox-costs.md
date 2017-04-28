@@ -13,6 +13,8 @@ realize that the sandbox cluster was too expensive for our needs.
 In this article I'll describe the strategies we used to decrease our
 sandbox cluster costs by ~70%.
 
+[Kops]: https://github.com/kubernetes/kops
+
 ## Tune requests and limits
 
 The first item here is probably the most important one: tune the requests and
@@ -69,7 +71,7 @@ You need to constantly keep an eye on that.
 
 AWS Elastic LoadBalancers costs almost $20/mo. At the beginning, we created
 all the services with the `service.beta.kubernetes.io/aws-load-balancer-internal`
-set, ending up with tons of ELBs - and waste of money.
+set, ending up with tons of ELBs and spending a lot of money.
 
 Later on, we created a Ingress controller with nginx, and most of our services
 are served through it. So, instead of having a ELB for each service, we
@@ -87,8 +89,8 @@ PS: Ingress controllers may be a little confusing at the beginning, don't worry.
 ## Shut idle pods down
 
 During the day it is common that someone deploys a service to test something,
-and goes on work on something else, while the pod is still there, running,
-with no accesses at all.
+and later move on to the next task, while the pod is still there, running,
+with no usage at all.
 
 To improve that, we wrote the following bash script, and put that in a
 crontab every 10 minutes:
@@ -142,7 +144,8 @@ kubectl get deployment --output=jsonpath='{.items[*].metadata.name}' |
 ```
 
 It will scale down to 0 replicas deployments whose pods didn't had
-accesses through our ingress in the last 90 minutes.
+accesses through our ingress in the last 90 minutes and are on for less
+than 1 hour.
 
 With that in place, we could run with less nodes some times of the day,
 but, changing the desired amount of machines on the AutoScale Groups
@@ -181,7 +184,7 @@ but it is not a problem, since no one is using them at that time.
 As I said before, most of our services are written in Java, and usually
 use "a lot" of memory (~700Mb+), while not so much CPU most of the time (~50m).
 
-We were using `c4.xlarge` machines, which lots of CPU and not so much memory,
+We were using `c4.xlarge` machines, with lots of CPU and not so much memory,
 so, we end up with memory being the bottleneck, causing the cluster-autoscaler
 to launch more instances because there were no memory enough, while having
 a lot of idle CPU time.
@@ -271,7 +274,7 @@ As you can see, I only realized that after some time, so, I don't have the
 precise daily costs before all these changes, but I estimate that we were
 spending at least $30/day, ~70% more than we are now.
 
-What about you? What are your strategies better use computational resources
-(and money)?
+What about you? What are your strategies for better use computational
+resources (and money)?
 
 [hpa]:https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/
