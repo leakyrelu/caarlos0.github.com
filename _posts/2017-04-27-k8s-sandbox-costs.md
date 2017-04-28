@@ -67,19 +67,19 @@ You need to constantly keep an eye on that.
 
 ## Load balancers
 
-AWS Elastic LoadBalancers costs $20/mo. At the beginning, we created all the
-services with the `service.beta.kubernetes.io/aws-load-balancer-internal`
-set.
+AWS Elastic LoadBalancers costs almost $20/mo. At the beginning, we created
+all the services with the `service.beta.kubernetes.io/aws-load-balancer-internal`
+set, ending up with tons of ELBs - and waste of money.
 
 Later on, we created a Ingress controller with nginx, and most of our services
-are served through that. So, instead of having a ELB for each service, we
-now have a single ELB for the Ingress nginx, and all requests pass through
-it, with nginx doing the work of sending the requests to the right pods.
+are served through it. So, instead of having a ELB for each service, we
+now have a single ELB for the Ingress. All requests pass through
+it, with nginx doing the work of sending them to the right pods.
 
 I recommend you to read [this really good article about how Ingress works][ing],
 and, of course, the [documentation][ing-docs].
 
-PS: They may be a little confusing at the beginning.
+PS: Ingress controllers may be a little confusing at the beginning, don't worry.
 
 [ing]: https://medium.com/@cashisclay/kubernetes-ingress-82aa960f658e
 [ing-docs]: https://kubernetes.io/docs/concepts/services-networking/ingress/
