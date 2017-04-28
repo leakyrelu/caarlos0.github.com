@@ -61,7 +61,8 @@ The best way I found is to:
 - Put some traffic into it, observe the resource usage, add ~10%: those are
 the `limits` values;
 
-Of course, this isn't perfect. Some times it will not be enough or be too much.
+Of course, this isn't perfect. Some times it will not be enough and
+other times it will be too much.
 Apps also change, and their resource usage tend to change as well.
 You need to constantly keep an eye on that.
 
@@ -71,7 +72,7 @@ You need to constantly keep an eye on that.
 
 AWS Elastic LoadBalancers costs almost $20/mo. At the beginning, we created
 all the services with the `service.beta.kubernetes.io/aws-load-balancer-internal`
-set, ending up with tons of ELBs and spending a lot of money.
+annotation set, ending up with tons of ELBs and spending a lot of money.
 
 Later on, we created a Ingress controller with nginx, and most of our services
 are served through it. So, instead of having a ELB for each service, we
@@ -92,7 +93,7 @@ During the day it is common that someone deploys a service to test something,
 and later move on to the next task, while the pod is still there, running,
 with no usage at all.
 
-To improve that, we wrote the following bash script, and put that in a
+To improve that, we wrote the following bash script, and put it in a
 crontab every 10 minutes:
 
 ```bash
@@ -182,7 +183,8 @@ but it is not a problem, since no one is using them at that time.
 ## Right instance types
 
 As I said before, most of our services are written in Java, and usually
-use "a lot" of memory (~700Mb+), while not so much CPU most of the time (~50m).
+they use "a lot" of memory (~700Mb+), while not so much
+CPU most of the time (~50m).
 
 We were using `c4.xlarge` machines, with lots of CPU and not so much memory,
 so, we end up with memory being the bottleneck, causing the cluster-autoscaler
