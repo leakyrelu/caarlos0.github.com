@@ -8,7 +8,7 @@ Our production cluster is still small, with few services running on it, but,
 most of our sandbox environment is running on a Kubernetes cluster on AWS.
 
 We created the clusters with [Kops] (which is great by the way), but we soon
-realize that the sandbox cluster was too expensive for our needs.
+realized that the sandbox cluster was too expensive for our needs.
 
 In this article I'll describe the strategies we used to decrease our
 sandbox cluster costs by ~70%.
@@ -74,7 +74,7 @@ AWS Elastic LoadBalancers costs almost $20/mo. At the beginning, we created
 all the services with the `service.beta.kubernetes.io/aws-load-balancer-internal`
 annotation set, ending up with tons of ELBs and spending a lot of money.
 
-Later on, we created a Ingress controller with nginx, and most of our services
+Later on, we created an Ingress controller with nginx, and most of our services
 are served through it. So, instead of having a ELB for each service, we
 now have a single ELB for the Ingress. All requests pass through
 it, with nginx doing the work of sending them to the right pods.
@@ -160,7 +160,7 @@ down, so, the best place to schedule a pod may change over time, generating
 idle nodes over times.
 
 Kubernetes contrib has this really good piece of software called
-[cluster-autoscaler]. The tool documentation itself is very complete, and
+[cluster-autoscaler]. The tool's documentation itself is very complete, and
 there is a [guide on how to run it on AWS][cluster-autoscaler-aws].
 
 The only problem we found is that it is usual for the Kubernetes scheduler to
@@ -249,13 +249,13 @@ reservations for them instead and save some money as well.
 Some of the strategies I explained here can be safely used in production
 clusters. The attention points are, in my opinion:
 
-1. You won't want to shut down all pods of a giving service in production,
+1. You won't want to shut down all pods of a given service in production,
 so, instead of downscaling to zero pods, you may want to use
 [Horizontal Pod Autoscalers][hpa] to autoscale horizontally based on
 CPU usage;
 2. It is probably not desirable nor safe to have a single node running in
 production, so I would not force the nodes downscale to that value. You
-may not have seasonal usage in production as we have in sandbox;
+may not have seasonal usage in production as we do in sandbox;
 3. Spot instances can be risky: you may loose the instances and
 end up with 0 nodes in your cluster. You can overcome that by having
 a mix of spot and on demand nodes instance groups, or by setting a very
