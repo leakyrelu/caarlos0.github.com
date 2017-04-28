@@ -13,10 +13,10 @@ permalink: /stats/
 
 ### Wakatime stats:
 
-{% for chart in site.wakatime.charts %}
+{% for chart in site.author.wakatime.charts %}
 
 <figure>
-  <embed src="https://wakatime.com/@{{ site.wakatime.username }}/{{ chart }}.svg" />
+  <embed src="https://wakatime.com/@{{ site.author.wakatime.username }}/{{ chart }}.svg" />
 </figure>
 
 {% endfor %}
