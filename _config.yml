@@ -5,15 +5,6 @@ highlighter: rouge
 permalink: /posts/:title/
 timezone: America/Sao_Paulo
 
-title: Carlos Alexandro Becker
-description: 'Software development and related stuff, by Carlos A. Becker'
-baseurl:     ''
-
-author:
-  name: 'Carlos Alexandro Becker'
-  url: https://twitter.com/caarlos0
-  email: root@carlosbecker.com
-
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -43,10 +34,20 @@ paginate: 5
 show_related_posts: true
 animated: true
 
+
 # please change ALL items bellow if you are forking my repo!
 # you may also want to edit about.md and delete all posts and images.
-github_username: caarlos0
-twitter_username: caarlos0
+
+title: Carlos Alexandro Becker
+description: 'Software development and related stuff, by Carlos A. Becker'
+baseurl:     ''
+
+author:
+  name: 'Carlos Alexandro Becker'
+  email: root@carlosbecker.com
+  github: caarlos0
+  twitter: caarlos0
+
 google_analytics: UA-50435491-1
 disqus_shortname: caarlos0blog
 wakatime:

@@ -107,7 +107,7 @@ hosts="$(kubectl get ingress nginx-ingress --output=jsonpath='{.spec.rules[*].ho
 pods="$(kubectl get pods)"
 
 # cache ingress logs of the last 90min
-logs="$(kubectl logs --since=90m "$(get_ingress)")"
+logs="$(kubectl logs --since=90m "$ingress")"
 
 # iterate over all deployments
 kubectl get deployment --output=jsonpath='{.items[*].metadata.name}' |
@@ -126,9 +126,9 @@ kubectl get deployment --output=jsonpath='{.items[*].metadata.name}' |
       continue
     }
 
-    # skip svcs with pods running less than 90min
+    # skip svcs with pods running less than 1h
     echo "$pods" | grep "$svc" | awk '{print $5}' | grep -q h ||  {
-      echo "$svc: pod running less than 90min"
+      echo "$svc: pod running less than 1h"
       continue
     }
 
