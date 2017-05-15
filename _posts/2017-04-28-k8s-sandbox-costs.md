@@ -104,7 +104,8 @@ ingress="$(kubectl get pods --output=jsonpath='{.items[*].metadata.name}' |
   xargs -n1 | grep "ingress-nginx" | head -n1)"
 
 # cache all hosts that pass through the ingress
-hosts="$(kubectl get ingress nginx-ingress --output=jsonpath='{.spec.rules[*].host}' | xargs -n1)"
+hosts="$(kubectl get ingress nginx-ingress \
+  --output=jsonpath='{.spec.rules[*].host}' | xargs -n1)"
 
 # cache pods
 pods="$(kubectl get pods)"
