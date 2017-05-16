@@ -143,7 +143,7 @@ things.
 First, disable the highlighter in the `_config.yml` file:
 
 ```yaml
-highlighter: ""
+highlighter: []
 ```
 
 Then, add the `script` and `link` tags into my `_post.html` layout
@@ -191,3 +191,4 @@ I strongly recommend you take a look at it, it will even give you
 free HTTPS :)
 
 [jekyll-seo-tag]: https://github.com/jekyll/jekyll-seo-tag
+[Cloudfare]: https://www.cloudflare.com/

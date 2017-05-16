@@ -1,5 +1,5 @@
 # Dependencies
-highlighter: ""
+highlighter: []
 
 # Permalinks
 permalink: /posts/:title/
