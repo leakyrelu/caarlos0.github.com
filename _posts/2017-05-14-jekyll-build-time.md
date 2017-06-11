@@ -143,7 +143,9 @@ things.
 First, disable the highlighter in the `_config.yml` file:
 
 ```yaml
-highlighter: []
+kramdown:
+  syntax_highlighter_opts:
+    disable : true
 ```
 
 Then, add the `script` and `link` tags into my `_post.html` layout
