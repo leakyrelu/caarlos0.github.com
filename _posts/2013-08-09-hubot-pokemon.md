@@ -16,7 +16,11 @@ These scripts vary from super useful ones, like starting a Jenkins build, to
 others even more use useful, like get a Carlton Dancing Gif or parse the
 emojis in the message (yes, emojis are very important).
 
+<!--
+
 ![carlton](http://gifsoup.com/webroot/animatedgifs/131815_o.gif)
+
+-->
 
 We named our personal bot "Charmander". He is kinda untrained yet, but it still
 do a lot of things. We can easily command him to deploy a branch in our staging
