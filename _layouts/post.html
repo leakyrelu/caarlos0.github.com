@@ -6,6 +6,17 @@ layout: default
 
 <article class="post-content">
   {{ content }}
+
+  <hr>
+  {% if page.ad %}
+    <p>
+      <b>ad:</b> {% include ads/{{ page.ad }}.html %}
+    </p>
+  {% else %}
+    <p>
+      <a href="/contact">Your ad here.</a>
+    </p>
+  {% endif %}
 </article>
 
 {% if site.disqus_shortname %}

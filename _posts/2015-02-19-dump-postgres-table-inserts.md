@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Dump a PostgreSQL table as insert statements"
+ad: ad1
 ---
 
 > FYI: Like the [previous post]({% post_url 2015-02-17-find-non-ascii-chars %}),
@@ -49,3 +50,4 @@ $ psql \
 
 That's it. A quick and useful tip that I have used many times and will probably
 use many more.
+
