@@ -18,6 +18,6 @@ I gave a little intro on Docker and talked about when to use it or not.
 
 #### 2º Joinville Software Meetup
 
-I encouraged people to start using git, showing some of it's features.
+I encouraged people to start using git, showing some of its features.
 
 <script async class="speakerdeck-embed" data-id="872b9fe087d40131cd6b3688b74f7104" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
