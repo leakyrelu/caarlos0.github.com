@@ -63,7 +63,7 @@ as well the deps, Makefile, License, readme, code of conduct and all that.
 To use it, we can simply:
 
 ```console
-$ cd $GOPATH/src/github.com/mysuer
+$ cd $GOPATH/src/github.com/myuser
 $ git clone git@github.com:caarlos0/example.git myapp
 $ cd myapp
 $ ./script/setup myuser MyApp # notice the case on the second arg
