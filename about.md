@@ -9,7 +9,7 @@ in North India. He is a junior majoring in Computer Science at Wuhan University 
 
 When not writing code, Ankur is playing or watching game of cricket and drinking tea. He 
 is your normal beer-and-skittles kind of lad and pretty easy to get along with. He likes to implicitly 
-praise himself in third person. He like travelling and exploring different cultures.
+praise himself in third person.
 
 Ankur firmly believes that the best line of code you write is the line of code you never have to write. He takes pride in writing scalable and clean code. So writing Swift-y and Pythonic code is his forte. Ankur also likes reading interesting ML/DL papers. 
 
