@@ -1,12 +1,11 @@
 ---
 layout: post
-title: "Save your f#cks"
+title: "Save thy f#cks"
 ---
 
-I came across a great book that I highy recommend, "The subtle art of not giving a f#uck" by Mark Manson. Before I even start talking about it,, let me  give a huge shout-out to the author.  Mark and Tim ferris are only two self help author I follow. So again, big up to himm. Don't forget to get yourself a copy on  Amazon. The kindle version costs  around 13 bucks. This was an insanely good read and something which helped me a lot over the years!
-So I decided that my first blog post should be about this book. Here's a excerpt from it which is, in lack of a better word, fuckworthy! No pun intended.  
+I came across a great book that I highy recommend, "The subtle art of not giving a f#ck" by Mark Manson. Before I even start talking about it, let me  give a huge shout-out to the author. Mark and Tim ferris are only two self help author I follow. So again, big up to him. Don't forget to get yourself a copy on Amazon. The kindle version costs around 13 bucks. This was an insanely good read and something which helped me a lot over the years! So, I decided that my first blog post should be about this book. Here's a excerpt from it which is, in lack of a better word, fuckworthy! No pun intended.  
 
-In my life I have given a fuck about many people and mny things. I have also NOT given a fuck about many people and many things. And fucks I have not given have made all the difference. 
+In my life I have given a fuck about many people and many things. I have also NOT given a fuck about many people and many things. And fucks I have not given have made all the difference. 
 
 People often say the key to confidence and success in life is to simply “not give a fuck.” Indeed, we often refer to the strongest, most admirable people we know in terms of their lack of fucks given. Like “Oh, look at Susie working weekends again, she doesn’t give a fuck.” Or “Did you hear that Tom called the company president an asshole and still got a raise anyway? Holy shit, that dude does not give a fuck.” Or “Jason got up and ended his date with Cindy after 20 minutes. He said he wasn’t going to listen to her bullshit anymore. Man, that guy does not give a fuck.”
 
